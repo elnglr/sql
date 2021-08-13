@@ -17,3 +17,16 @@ SELECT country from country WHERE length (country) >6 AND country LIKE '%n'
 SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
 SELECT * From film Where title LIKE 'C%' AND length > 90 AND rental_rate = 2.99 
 
+--odev 4
+SELECT DISTINCT replacement_cost
+FROM film;
+
+
+SELECT COUNT(DISTINCT replacement_cost)
+FROM film;
+
+SELECT COUNT(*) from film where title = 'T%' and rating= 'G%'
+
+SELECT COUNT(*) from film where length(country ) =5 ;
+SELECT COUNT(*) from city where ILIKE city = 'r%';
+
