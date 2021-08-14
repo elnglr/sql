@@ -30,3 +30,24 @@ SELECT COUNT(*) from film where title = 'T%' and rating= 'G%'
 SELECT COUNT(*) from film where length(country ) =5 ;
 SELECT COUNT(*) from city where ILIKE city = 'r%';
 
+
+
+
+--odev 5
+SELECT title, length from film 
+WHERE title LIKE '%n'
+ORDER BY length DESC
+LIMIT 5
+
+
+SELECT title, length from film 
+WHERE title LIKE '%n'
+ORDER BY length ASC
+OFFSET 2
+LIMIT 5
+
+
+SELECT last_name from customer
+WHERE store_id = 1
+ORDER BY last_name DESC limit 4
+
