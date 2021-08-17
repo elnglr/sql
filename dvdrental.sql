@@ -155,3 +155,12 @@ DELETE from employee where birthday = '2002-08-26';
 
 
 
+--odev 9
+
+SELECT city,country FROM city  JOIN country ON (country.country_id = city.country_id );
+
+
+SELECT payment_id, first_name, last_name FROM customer INNER JOIN payment ON (payment.customer_id = customer.customer_id);
+
+SELECT first_name,last_name,rental_id FROM customer INNER JOIN rental ON( customer.customer_id = rental.customer_id );
+
