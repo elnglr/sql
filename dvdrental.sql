@@ -191,3 +191,37 @@ EXCEPT
 ( SELECT first_name FROM customer )
 
 --UNION ALL, INTERSECT ALL, EXCEPT ALL
+
+
+--homework 12
+--SELECT COUNT(*)  FROM film WHERE length > ( SELECT AVG(length) FROM film)
+
+SELECT COUNT(*) 
+FROM film 
+WHERE rental_rate = ( 
+	SELECT MAX(rental_rate) FROM film
+)
+
+
+
+
+SELECT title FROM film WHERE film_id = ANY 
+( SELECT film_id FROM film WHERE rental_rate = ( SELECT MIN(rental_rate ) FROM film )
+ AND
+ replacement_cost = ( SELECT MIN(replacement_cost) FROM film ) )
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ SELECT first_name,last_name
+FROM customer 
+JOIN payment
+ON ( payment.customer_id = customer.customer_id )
+WHERE amount = ( SELECT MAX(amount)FROM payment );
+
+ 
+ 
