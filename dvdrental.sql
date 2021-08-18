@@ -173,3 +173,21 @@ SELECT first_name,last_name,payment_id FROM customer RIGHT JOIN payment ON ( pay
 SELECT first_name,last_name,rental_id FROM customer FULL JOIN rental ON( customer.customer_id = rental.customer_id )
 
 
+
+--hw11
+ ( SELECT first_name FROM actor )
+UNION
+( SELECT first_name FROM customer );
+
+
+
+( SELECT first_name FROM actor )
+INTERSECT
+( SELECT first_name FROM customer );
+
+
+( SELECT first_name FROM actor )
+EXCEPT
+( SELECT first_name FROM customer )
+
+--UNION ALL, INTERSECT ALL, EXCEPT ALL
